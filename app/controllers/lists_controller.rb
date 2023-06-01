@@ -10,7 +10,8 @@ def create
   redirect_to list_path(list.id)
 end
   def index
-       @lists = List.all
+    puts "作成したキー #{ENV['SECRET_KEY']}"
+    @lists = List.all
   end
 
   def show
